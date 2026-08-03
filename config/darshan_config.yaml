@@ -1,0 +1,17 @@
+app:
+  theme: "cyberpunk"
+  quiet_mode: false
+  show_working_logs: false
+
+experiments:
+  default_epochs: 30
+  smoke:
+    epochs: 1
+    samples: 30
+    qubits: 4
+    binary: true
+  research:
+    epochs: 10
+    samples: 200
+    qubits: 8
+    binary: false

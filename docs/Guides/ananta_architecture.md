@@ -102,8 +102,8 @@ Where `logits = Q_out · W_readout + b_readout` (linear readout from quantum exp
 ### Checkpointing
 
 ```python
-model.save_checkpoint('results/ananta_checkpoint.npz')
-model.load_checkpoint('results/ananta_checkpoint.npz')
+model.save_checkpoint("results/ananta_checkpoint.npz")
+model.load_checkpoint("results/ananta_checkpoint.npz")
 ```
 
 Saves: weights, readout weights, readout bias, classes, epoch count, loss/accuracy history, training sessions count.
@@ -120,18 +120,18 @@ Resumes training from the current weight state, tracking cumulative epochs and s
 
 ```python
 {
-    'model': 'Ananta',
-    'accuracy': float,
-    'f1_macro': float,
-    'auc_roc': float,
-    'brier_score': float,
-    'log_loss': float,
-    'train_time': float,
-    'predict_time': float,
-    'loss_history': list[float],
-    'total_epochs': int,
-    'training_sessions': int,
-    'best_epoch': int
+    "model": "Ananta",
+    "accuracy": float,
+    "f1_macro": float,
+    "auc_roc": float,
+    "brier_score": float,
+    "log_loss": float,
+    "train_time": float,
+    "predict_time": float,
+    "loss_history": list[float],
+    "total_epochs": int,
+    "training_sessions": int,
+    "best_epoch": int,
 }
 ```
 
@@ -209,17 +209,17 @@ When `noise_aware=True` and `noise_prob > 0`:
 
 ```python
 {
-    'model': 'AnantaPro (Hybrid Ensemble)',
-    'accuracy': float,
-    'f1_macro': float,
-    'auc_roc': float,
-    'brier_score': float,
-    'log_loss': float,
-    'train_time': float,
-    'predict_time': float,
-    'best_params': dict,
-    'classification_report': dict,
-    'quantum_transform_time': float
+    "model": "AnantaPro (Hybrid Ensemble)",
+    "accuracy": float,
+    "f1_macro": float,
+    "auc_roc": float,
+    "brier_score": float,
+    "log_loss": float,
+    "train_time": float,
+    "predict_time": float,
+    "best_params": dict,
+    "classification_report": dict,
+    "quantum_transform_time": float,
 }
 ```
 

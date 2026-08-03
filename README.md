@@ -356,6 +356,10 @@ for Rigorous Benchmarking under Dimensional Parity Constraints.
 ```text
 Darshan/
 ├── darshan.py                    # Main CLI orchestrator and REPL
+├── CHANGELOG.md                  # Release notes and version history
+├── pyproject.toml                # Project packaging and metadata
+├── darshan_config.yaml           # Global configuration overrides
+├── .pre-commit-config.yaml       # Ruff formatting and linting hooks
 ├── requirements.txt              # Dependency pinning
 ├── start_darshan.bat             # Windows UTF-8 launcher script
 ├── data/
@@ -364,6 +368,9 @@ Darshan/
 │   ├── parampara_*.py            # Classical SVM / baselines
 │   ├── ananta_*.py               # Pure VQC / quantum extractors
 │   └── samyoga_*.py              # Hybrid Quantum-Classical networks
+├── tests/
+│   ├── test_data.py              # Data loader unit tests
+│   └── test_models.py            # Model smoke and backend tests
 ├── experiments/
 │   ├── run_*.py                  # Experiment orchestration scripts
 │   └── stats_engine.py           # Significance testing and LaTeX export
@@ -397,9 +404,25 @@ cd Darshan
 python -m venv .venv
 .\.venv\Scripts\Activate
 
-# 3. Install dependencies
+# 3. Install dependencies and the package in editable mode
 pip install -r requirements.txt
+pip install -e .
+
+# 4. (Optional) Run the test suite
+pytest tests/ -v
 ```
+
+---
+
+## 14.5 Advanced Configuration & GPU Acceleration
+
+### Configuration
+Darshan includes a global `darshan_config.yaml` file that acts as the single source of truth for UI themes, default random seeds, and backend simulators. 
+
+### High-Performance Backends
+By default, models use the standard PennyLane `default.qubit` simulator. However, they now support passing custom backends for massive speedups:
+- `backend='lightning.qubit'`: High-performance C++ CPU simulator (Enabled automatically on Windows).
+- `backend='lightning.gpu'`: Hardware-accelerated GPU simulator utilizing NVIDIA `cuQuantum`. *(Note: cuQuantum currently requires running Darshan through a WSL2 Linux environment).*
 
 ---
 

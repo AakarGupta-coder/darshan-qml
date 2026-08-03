@@ -54,18 +54,18 @@ In `research`, `full`, and `large` modes, the best estimator is wrapped in `Cali
 
 ```python
 {
-    'model': 'ParamparaLegacy',
-    'accuracy': float,           # Test accuracy
-    'f1_macro': float,           # Macro F1
-    'auc_roc': float,            # AUC-ROC (OvR macro for multiclass)
-    'brier_score': float,        # Brier score (binary only, NaN otherwise)
-    'log_loss': float,           # Log loss
-    'train_time': float,         # Training wall-clock time (seconds)
-    'predict_time': float,       # Prediction wall-clock time (seconds)
-    'best_params': dict,         # Best hyperparameters from GridSearchCV
-    'best_cv_score': float,      # Best cross-validation accuracy
-    'calibrated': bool,          # Whether calibration was applied
-    'classification_report': dict # Per-class precision/recall/f1
+    "model": "ParamparaLegacy",
+    "accuracy": float,  # Test accuracy
+    "f1_macro": float,  # Macro F1
+    "auc_roc": float,  # AUC-ROC (OvR macro for multiclass)
+    "brier_score": float,  # Brier score (binary only, NaN otherwise)
+    "log_loss": float,  # Log loss
+    "train_time": float,  # Training wall-clock time (seconds)
+    "predict_time": float,  # Prediction wall-clock time (seconds)
+    "best_params": dict,  # Best hyperparameters from GridSearchCV
+    "best_cv_score": float,  # Best cross-validation accuracy
+    "calibrated": bool,  # Whether calibration was applied
+    "classification_report": dict,  # Per-class precision/recall/f1
 }
 ```
 
@@ -126,15 +126,15 @@ Industry:    X_train → StandardScaler → SVC(RBF) or HistGBM → RandomizedSe
 
 ```python
 {
-    'model': 'ParamparaPro (Fair Track)' or 'ParamparaPro (Industry Track)',
-    'accuracy': float,
-    'f1_macro': float,
-    'auc_roc': float,
-    'brier_score': float,
-    'log_loss': float,
-    'train_time': float,
-    'predict_time': float,
-    'best_params': dict
+    "model": "ParamparaPro (Fair Track)" or "ParamparaPro (Industry Track)",
+    "accuracy": float,
+    "f1_macro": float,
+    "auc_roc": float,
+    "brier_score": float,
+    "log_loss": float,
+    "train_time": float,
+    "predict_time": float,
+    "best_params": dict,
 }
 ```
 

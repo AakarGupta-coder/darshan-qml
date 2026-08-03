@@ -128,8 +128,8 @@ Cached features are loaded automatically on subsequent runs with identical confi
 ### Checkpointing
 
 ```python
-model.save_checkpoint('results/samyoga_checkpoint.npz')
-model.load_checkpoint('results/samyoga_checkpoint.npz')
+model.save_checkpoint("results/samyoga_checkpoint.npz")
+model.load_checkpoint("results/samyoga_checkpoint.npz")
 ```
 
 Saves: weights (all seeds), readout weights, readout biases, classes, epoch count, loss/accuracy/val history, session count.
@@ -180,8 +180,8 @@ flowchart TD
 def distance_scaled_zne(self, func, distances, *args):
     # Evaluate function at multiple noise distances
     # Fit polynomial and extrapolate to zero-noise limit
-    results = [func(*args) + noise(1/d) for d in distances]
-    poly = np.polyfit([1/d for d in distances], results, deg=len(distances)-1)
+    results = [func(*args) + noise(1 / d) for d in distances]
+    poly = np.polyfit([1 / d for d in distances], results, deg=len(distances) - 1)
     return poly[-1]  # Zero-noise extrapolated value
 ```
 
@@ -242,9 +242,7 @@ A **parameter-matched classical MLP** that controls for the hypothesis: "Samyoga
 
 ```python
 MLPClassifier(
-    hidden_layer_sizes=(h1, h2, h3),
-    activation='relu', solver='adam',
-    learning_rate_init=0.002, max_iter=1000
+    hidden_layer_sizes=(h1, h2, h3), activation="relu", solver="adam", learning_rate_init=0.002, max_iter=1000
 )
 ```
 
@@ -267,7 +265,7 @@ Where layer sizes are computed to match Samyoga Pro's parameter footprint:
 Samyoga Shadow is only included in comparison experiments when **Fair Mode** is enabled:
 ```python
 if fair_mode:
-    models['Samyoga Shadow'] = SamyogaShadow(...)
+    models["Samyoga Shadow"] = SamyogaShadow(...)
 ```
 
 ---

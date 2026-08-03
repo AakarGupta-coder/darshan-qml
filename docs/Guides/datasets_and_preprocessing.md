@@ -130,9 +130,7 @@ The function `load_dataset(name, n_pca=None, test_size=0.2, random_state=42, sca
 
 ### Step 2: Train/Test Split
 ```python
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
-)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
 ```
 - **Stratified split** ensures class proportions are maintained in both sets
 - Default split ratio: 80% train / 20% test
@@ -142,7 +140,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 ```python
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)  # Fit on train only
-X_test = scaler.transform(X_test)        # Transform test with train statistics
+X_test = scaler.transform(X_test)  # Transform test with train statistics
 ```
 - Centers each feature to mean=0, std=1
 - **Fit only on training data** to prevent data leakage

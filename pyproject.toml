@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darshan"
+version = "0.1.0"
+description = "Hybrid Quantum-Classical Machine Learning Framework"
+readme = "README.md"
+authors = [
+    {name = "Aakar Gupta"}
+]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pennylane>=0.38.0",
+    "scikit-learn>=1.5.0",
+    "scipy>=1.13.0",
+    "numpy>=1.26.0",
+    "matplotlib>=3.9.0",
+    "pandas>=2.2.0",
+    "seaborn>=0.13.0",
+    "tqdm>=4.66.0",
+    "rich",
+    "questionary",
+    "plotext",
+    "prompt_toolkit",
+    "pyyaml>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "mypy>=1.9.0",
+    "ruff>=0.3.0",
+]
+
+[project.scripts]
+darshan = "darshan:main"
+
+[tool.setuptools.packages.find]
+include = ["models*", "data*", "experiments*", "ui*", "utils*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "E402"] # Line too long

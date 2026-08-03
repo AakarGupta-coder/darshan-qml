@@ -92,19 +92,17 @@ This ensures consistent color coding across charts, bars, and terminal displays.
 All Matplotlib charts use a dark background theme applied by `apply_neon_theme()`:
 
 ```python
-plt.style.use('dark_background')
-sns.set_theme(style='darkgrid', rc={
-    'axes.facecolor': '#121212',
-    'figure.facecolor': '#121212',
-    'grid.color': '#2a2a2a',
-    'text.color': 'white'
-})
+plt.style.use("dark_background")
+sns.set_theme(
+    style="darkgrid",
+    rc={"axes.facecolor": "#121212", "figure.facecolor": "#121212", "grid.color": "#2a2a2a", "text.color": "white"},
+)
 ```
 
 Charts are saved at **300 DPI** to `results/figures/`:
 
 ```python
-fig.savefig(path, dpi=300, bbox_inches='tight')
+fig.savefig(path, dpi=300, bbox_inches="tight")
 ```
 
 ### Chart Types
@@ -151,6 +149,7 @@ Renders line graphs in the terminal using the `plotext` library:
 
 ```python
 import plotext as plt
+
 plt.plot(x_values, y_values)
 plt.title("Scaling Curve")
 plt.show()
@@ -234,7 +233,7 @@ animate_panel(
     text="Initializing quantum subsystem...",
     title="SYSTEM STATUS",
     border_style="#00FF41",
-    delay=0.005  # 5ms per character
+    delay=0.005,  # 5ms per character
 )
 ```
 
@@ -268,9 +267,10 @@ Interactive selection menus use `questionary` with theme-aware styling:
 
 ```python
 from ui.theme import get_q_style
+
 answer = questionary.select(
     "Choose a dataset:",
     choices=dataset_list,
-    style=get_q_style()  # Matches current Darshan theme
+    style=get_q_style(),  # Matches current Darshan theme
 ).ask()
 ```
