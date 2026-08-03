@@ -1,0 +1,41 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS and editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+tmp/
+temp/
+
+# Generated local model/checkpoint artifacts
+results/cache/
+results/checkpoints/
+results/metrics/sessions/
+*.npz
+*.pkl
+*.joblib
+
+# Private research drafts and office backups
+docs/Research Docs/
+docs/Other Docs/
+~$*
+*.docx
+*.pptx

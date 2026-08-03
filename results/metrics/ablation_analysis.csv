@@ -1,0 +1,25 @@
+Dataset,Model,Accuracy,AUC_ROC
+moons,Samyoga Legacy (Full),0.9,0.98
+moons,Samyoga Legacy (No Interactions),0.95,0.99
+moons,Samyoga Legacy (No Selection),0.95,0.98
+moons,AnantaPro (Full Hybrid),0.95,1.0
+moons,AnantaPro (Classical Only),0.9,0.1
+moons,AnantaPro (Quantum Only),0.95,1.0
+moons,AnantaPro (Shuffled Quantum),0.95,0.93
+moons,AnantaPro (No Interactions),0.95,0.93
+wine,Samyoga Legacy (Full),0.9722222222222222,0.9876780626780628
+wine,Samyoga Legacy (No Interactions),0.9722222222222222,1.0
+wine,Samyoga Legacy (No Selection),0.9722222222222222,0.9852147852147852
+wine,AnantaPro (Full Hybrid),0.9166666666666666,0.9954711954711954
+wine,AnantaPro (Classical Only),1.0,1.0
+wine,AnantaPro (Quantum Only),0.9166666666666666,0.9894605394605396
+wine,AnantaPro (Shuffled Quantum),1.0,1.0
+wine,AnantaPro (No Interactions),1.0,1.0
+iris,Samyoga Legacy (Full),0.9666666666666667,0.9966666666666667
+iris,Samyoga Legacy (No Interactions),0.9666666666666667,0.9966666666666667
+iris,Samyoga Legacy (No Selection),0.9666666666666667,1.0
+iris,AnantaPro (Full Hybrid),0.9666666666666667,0.9933333333333333
+iris,AnantaPro (Classical Only),0.9333333333333333,0.9899999999999999
+iris,AnantaPro (Quantum Only),0.9666666666666667,0.9933333333333333
+iris,AnantaPro (Shuffled Quantum),0.9666666666666667,0.9933333333333333
+iris,AnantaPro (No Interactions),0.9666666666666667,0.9933333333333333
